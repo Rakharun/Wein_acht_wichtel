@@ -1,0 +1,368 @@
+\hypertarget{classWeinAchtsWichtel_1_1Spielstand}{}\doxysection{Wein\+Achts\+Wichtel\+::Spielstand Klassenreferenz}
+\label{classWeinAchtsWichtel_1_1Spielstand}\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+
+
+{\ttfamily \#include $<$Spielstand.\+hpp$>$}
+
+
+
+Zusammengehörigkeiten von Wein\+Achts\+Wichtel\+::Spielstand\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classWeinAchtsWichtel_1_1Spielstand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a58e1542996b47adb3ddaea103000035e}{Spielstand}} ()
+\item 
+\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a40268a6438733c68d9f282e2d63a4988}{$\sim$\+Spielstand}} ()
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_af518d94773cee01c8d3822377be68862}{starte\+Spielzeit}} ()
+\item 
+int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a1d21f76e7bb7446c53ff572aaa6f1e30}{bekomme\+Zeit}} (\mbox{\hyperlink{namespaceWeinAchtsWichtel_ab01335d26eb401d8c96f3255027a6b06}{Zeiten}} Anfrage, \mbox{\hyperlink{namespaceWeinAchtsWichtel_a1bda9e9653be8373de93683797ea822e}{Aufgabe}} Anfrage\+Aufgabe=\mbox{\hyperlink{namespaceWeinAchtsWichtel_a1bda9e9653be8373de93683797ea822ea405487a16aaa750df99a9c1d72d2003e}{Aufgabe\+::\+UNTAETIG}}, int seit\+Zeitpunkt=0)
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_aa12a7aaab79df1ec576cc242160c0050}{setze\+Aufgabenabschluss}} (\mbox{\hyperlink{namespaceWeinAchtsWichtel_a1bda9e9653be8373de93683797ea822e}{Aufgabe}} Anfrage)
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a979334f2dfcf6bf057d7a9b13af4aa9e}{halte\+Spielregeln\+Ein}} ()
+\item 
+bool \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_ac162a55a84b5bfd27ef41022c6bbd505}{bekomme\+Schlitten\+Status}} ()
+\item 
+int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a398a83eccd624b6d5f2889473f48031e}{bekomme\+Stapel\+Papier\+Bemalt}} ()
+\item 
+int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a4fe552f328619bd3b3da1a99f5cfaf74}{bekomme\+Stapel\+Verpackt}} ()
+\item 
+int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_ae4d9c2c9de00265ccce012a08462959e}{bekomme\+Stapel\+Schlitten}} ()
+\item 
+int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a4e3d933b1f7697dda97ea2c24725969c}{bekomme\+Stapel\+Verpackt\+Max}} ()
+\item 
+int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_ad5794b5d7c3adb1a74b25136f84dc521}{bekommestapel\+Schlitten\+Max\+Haltbarkeit}} ()
+\item 
+int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a34246f87045b8e1919fcb187d936ecaf}{bekomme\+Stapel\+Zugestellt}} ()
+\item 
+int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a0e7456eb84275ea8baa320c7a459ba1e}{bekomme\+Stapel\+Wichtel\+Max}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_aee98f3e4c7c0a7a1fc27a98967990dfc}{spielzeit\+Start}}
+\item 
+std\+::mutex \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a5817b2ad71aec9aa27c4a7eac22e0e79}{mein\+Mutex}}
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a4a46c008344bbad62afe6290406d3fea}{stapel\+Papier\+Bemalt}}
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a49fd7725ce912b23013376fbfb3b2b28}{stapel\+Verpackt}}
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a2bc8376b047f9727a4d40bcd92d9ba93}{stapel\+Schlitten}}
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_abe861f81c7e8c34c76d4989678fb3186}{stapel\+Zugestellt}}
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_add7428e5ac2f65d4b5a5d4a352618aa8}{stapel\+Verpackt\+Max}}
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a865b2d07d7ecc262c6ab6eec012adf0d}{stapel\+Schlitten\+Max\+Haltbarkeit}}
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a2c8baaa0af62d1fc8ad4e19f004bbff3}{stapel\+Wichtel\+Max}}
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a358c993c9407b89efbdb2aa587811e43}{spielzeit\+Gesamtlaenge}} = 24$\ast$10$\ast$1000
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a4c47e1d87407cc7ae2672e97cdc67d43}{zeit\+Bemalen}} = 3000
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_ad55833a16d9980dfc976fbdd86f02bce}{zeit\+Verpacken}} = 3000
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a7ace3fbdfafd5808e877912f0ffd2beb}{zeit\+Schlitten\+Abfahrt}} = 30000
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_aa5efda7317aa361eb53e1d43375adcf4}{zeit\+Aufladen}} = 2000
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a9bc7124c9f67a1b1d16c5294ba2ab1e5}{zeit\+Pause}} = 1000
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a9d317c461fda19bed4452b3ea02d7cf1}{zeit\+Abladen}} = 1000
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a200f5fa68da13bd34cbdeca49a75dd21}{zeit\+Hol\+Hilfe}} = 100000
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_aaa94c3e4d0f216ff3a6f5957d53b6124}{zeit\+Reparieren}} = 1500
+\item 
+unsigned \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a87db641094d3b47437ccc69cd1ae0733}{zeit\+Seit\+Abgefahren}} = 0
+\item 
+bool \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_adf5f22a7682d3d87330e227ab0c958fd}{schlitten\+Zustand}} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Statische, private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a2a38afced3138c9a60480432043eda61}{standart\+Stapel\+Papier\+Bemalt}} = 0
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a7c51139ad17ddaef774b09cb726ad3fc}{standart\+Stapel\+Verpackt}} = 0
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_acfba15bdfb295b50df9cba961d3a6109}{standart\+Stapel\+Schlitten}} = 0
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a22527b8b54cf6b6de9adea21e74b7758}{standart\+Stapel\+Zugestellt}} = 0
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_ae12ebd34df966909cff894160532ca06}{standart\+Stapel\+Verpackt\+Max}} = 15
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_afa3bfe2a3f3c49a075673df8e411e612}{standart\+Stapel\+Schlitten\+Max\+Haltbarkeit}} = 35
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand_a19a5d0ce54ca9599310241f9c3e2a269}{standart\+Stapel\+Wichtel\+Max}} = 6
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a58e1542996b47adb3ddaea103000035e}\label{classWeinAchtsWichtel_1_1Spielstand_a58e1542996b47adb3ddaea103000035e}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!Spielstand@{Spielstand}}
+\index{Spielstand@{Spielstand}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{Spielstand()}{Spielstand()}}
+{\footnotesize\ttfamily Wein\+Achts\+Wichtel\+::\+Spielstand\+::\+Spielstand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a40268a6438733c68d9f282e2d63a4988}\label{classWeinAchtsWichtel_1_1Spielstand_a40268a6438733c68d9f282e2d63a4988}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!````~Spielstand@{$\sim$Spielstand}}
+\index{````~Spielstand@{$\sim$Spielstand}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{$\sim$Spielstand()}{~Spielstand()}}
+{\footnotesize\ttfamily Wein\+Achts\+Wichtel\+::\+Spielstand\+::$\sim$\+Spielstand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_ac162a55a84b5bfd27ef41022c6bbd505}\label{classWeinAchtsWichtel_1_1Spielstand_ac162a55a84b5bfd27ef41022c6bbd505}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!bekommeSchlittenStatus@{bekommeSchlittenStatus}}
+\index{bekommeSchlittenStatus@{bekommeSchlittenStatus}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{bekommeSchlittenStatus()}{bekommeSchlittenStatus()}}
+{\footnotesize\ttfamily bool Wein\+Achts\+Wichtel\+::\+Spielstand\+::bekomme\+Schlitten\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a398a83eccd624b6d5f2889473f48031e}\label{classWeinAchtsWichtel_1_1Spielstand_a398a83eccd624b6d5f2889473f48031e}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!bekommeStapelPapierBemalt@{bekommeStapelPapierBemalt}}
+\index{bekommeStapelPapierBemalt@{bekommeStapelPapierBemalt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{bekommeStapelPapierBemalt()}{bekommeStapelPapierBemalt()}}
+{\footnotesize\ttfamily int Wein\+Achts\+Wichtel\+::\+Spielstand\+::bekomme\+Stapel\+Papier\+Bemalt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_ae4d9c2c9de00265ccce012a08462959e}\label{classWeinAchtsWichtel_1_1Spielstand_ae4d9c2c9de00265ccce012a08462959e}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!bekommeStapelSchlitten@{bekommeStapelSchlitten}}
+\index{bekommeStapelSchlitten@{bekommeStapelSchlitten}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{bekommeStapelSchlitten()}{bekommeStapelSchlitten()}}
+{\footnotesize\ttfamily int Wein\+Achts\+Wichtel\+::\+Spielstand\+::bekomme\+Stapel\+Schlitten (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_ad5794b5d7c3adb1a74b25136f84dc521}\label{classWeinAchtsWichtel_1_1Spielstand_ad5794b5d7c3adb1a74b25136f84dc521}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!bekommestapelSchlittenMaxHaltbarkeit@{bekommestapelSchlittenMaxHaltbarkeit}}
+\index{bekommestapelSchlittenMaxHaltbarkeit@{bekommestapelSchlittenMaxHaltbarkeit}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{bekommestapelSchlittenMaxHaltbarkeit()}{bekommestapelSchlittenMaxHaltbarkeit()}}
+{\footnotesize\ttfamily int Wein\+Achts\+Wichtel\+::\+Spielstand\+::bekommestapel\+Schlitten\+Max\+Haltbarkeit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a4fe552f328619bd3b3da1a99f5cfaf74}\label{classWeinAchtsWichtel_1_1Spielstand_a4fe552f328619bd3b3da1a99f5cfaf74}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!bekommeStapelVerpackt@{bekommeStapelVerpackt}}
+\index{bekommeStapelVerpackt@{bekommeStapelVerpackt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{bekommeStapelVerpackt()}{bekommeStapelVerpackt()}}
+{\footnotesize\ttfamily int Wein\+Achts\+Wichtel\+::\+Spielstand\+::bekomme\+Stapel\+Verpackt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a4e3d933b1f7697dda97ea2c24725969c}\label{classWeinAchtsWichtel_1_1Spielstand_a4e3d933b1f7697dda97ea2c24725969c}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!bekommeStapelVerpacktMax@{bekommeStapelVerpacktMax}}
+\index{bekommeStapelVerpacktMax@{bekommeStapelVerpacktMax}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{bekommeStapelVerpacktMax()}{bekommeStapelVerpacktMax()}}
+{\footnotesize\ttfamily int Wein\+Achts\+Wichtel\+::\+Spielstand\+::bekomme\+Stapel\+Verpackt\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a0e7456eb84275ea8baa320c7a459ba1e}\label{classWeinAchtsWichtel_1_1Spielstand_a0e7456eb84275ea8baa320c7a459ba1e}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!bekommeStapelWichtelMax@{bekommeStapelWichtelMax}}
+\index{bekommeStapelWichtelMax@{bekommeStapelWichtelMax}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{bekommeStapelWichtelMax()}{bekommeStapelWichtelMax()}}
+{\footnotesize\ttfamily int Wein\+Achts\+Wichtel\+::\+Spielstand\+::bekomme\+Stapel\+Wichtel\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a34246f87045b8e1919fcb187d936ecaf}\label{classWeinAchtsWichtel_1_1Spielstand_a34246f87045b8e1919fcb187d936ecaf}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!bekommeStapelZugestellt@{bekommeStapelZugestellt}}
+\index{bekommeStapelZugestellt@{bekommeStapelZugestellt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{bekommeStapelZugestellt()}{bekommeStapelZugestellt()}}
+{\footnotesize\ttfamily int Wein\+Achts\+Wichtel\+::\+Spielstand\+::bekomme\+Stapel\+Zugestellt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a1d21f76e7bb7446c53ff572aaa6f1e30}\label{classWeinAchtsWichtel_1_1Spielstand_a1d21f76e7bb7446c53ff572aaa6f1e30}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!bekommeZeit@{bekommeZeit}}
+\index{bekommeZeit@{bekommeZeit}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{bekommeZeit()}{bekommeZeit()}}
+{\footnotesize\ttfamily int Wein\+Achts\+Wichtel\+::\+Spielstand\+::bekomme\+Zeit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWeinAchtsWichtel_ab01335d26eb401d8c96f3255027a6b06}{Zeiten}}}]{Anfrage,  }\item[{\mbox{\hyperlink{namespaceWeinAchtsWichtel_a1bda9e9653be8373de93683797ea822e}{Aufgabe}}}]{Anfrage\+Aufgabe = {\ttfamily \mbox{\hyperlink{namespaceWeinAchtsWichtel_a1bda9e9653be8373de93683797ea822ea405487a16aaa750df99a9c1d72d2003e}{Aufgabe\+::\+UNTAETIG}}},  }\item[{int}]{seit\+Zeitpunkt = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a979334f2dfcf6bf057d7a9b13af4aa9e}\label{classWeinAchtsWichtel_1_1Spielstand_a979334f2dfcf6bf057d7a9b13af4aa9e}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!halteSpielregelnEin@{halteSpielregelnEin}}
+\index{halteSpielregelnEin@{halteSpielregelnEin}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{halteSpielregelnEin()}{halteSpielregelnEin()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spielstand\+::halte\+Spielregeln\+Ein (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_aa12a7aaab79df1ec576cc242160c0050}\label{classWeinAchtsWichtel_1_1Spielstand_aa12a7aaab79df1ec576cc242160c0050}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!setzeAufgabenabschluss@{setzeAufgabenabschluss}}
+\index{setzeAufgabenabschluss@{setzeAufgabenabschluss}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{setzeAufgabenabschluss()}{setzeAufgabenabschluss()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spielstand\+::setze\+Aufgabenabschluss (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWeinAchtsWichtel_a1bda9e9653be8373de93683797ea822e}{Aufgabe}}}]{Anfrage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_af518d94773cee01c8d3822377be68862}\label{classWeinAchtsWichtel_1_1Spielstand_af518d94773cee01c8d3822377be68862}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!starteSpielzeit@{starteSpielzeit}}
+\index{starteSpielzeit@{starteSpielzeit}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{starteSpielzeit()}{starteSpielzeit()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spielstand\+::starte\+Spielzeit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a5817b2ad71aec9aa27c4a7eac22e0e79}\label{classWeinAchtsWichtel_1_1Spielstand_a5817b2ad71aec9aa27c4a7eac22e0e79}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!meinMutex@{meinMutex}}
+\index{meinMutex@{meinMutex}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{meinMutex}{meinMutex}}
+{\footnotesize\ttfamily std\+::mutex Wein\+Achts\+Wichtel\+::\+Spielstand\+::mein\+Mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_adf5f22a7682d3d87330e227ab0c958fd}\label{classWeinAchtsWichtel_1_1Spielstand_adf5f22a7682d3d87330e227ab0c958fd}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!schlittenZustand@{schlittenZustand}}
+\index{schlittenZustand@{schlittenZustand}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{schlittenZustand}{schlittenZustand}}
+{\footnotesize\ttfamily bool Wein\+Achts\+Wichtel\+::\+Spielstand\+::schlitten\+Zustand = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a358c993c9407b89efbdb2aa587811e43}\label{classWeinAchtsWichtel_1_1Spielstand_a358c993c9407b89efbdb2aa587811e43}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!spielzeitGesamtlaenge@{spielzeitGesamtlaenge}}
+\index{spielzeitGesamtlaenge@{spielzeitGesamtlaenge}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{spielzeitGesamtlaenge}{spielzeitGesamtlaenge}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::spielzeit\+Gesamtlaenge = 24$\ast$10$\ast$1000\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_aee98f3e4c7c0a7a1fc27a98967990dfc}\label{classWeinAchtsWichtel_1_1Spielstand_aee98f3e4c7c0a7a1fc27a98967990dfc}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!spielzeitStart@{spielzeitStart}}
+\index{spielzeitStart@{spielzeitStart}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{spielzeitStart}{spielzeitStart}}
+{\footnotesize\ttfamily std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point Wein\+Achts\+Wichtel\+::\+Spielstand\+::spielzeit\+Start\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a2a38afced3138c9a60480432043eda61}\label{classWeinAchtsWichtel_1_1Spielstand_a2a38afced3138c9a60480432043eda61}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!standartStapelPapierBemalt@{standartStapelPapierBemalt}}
+\index{standartStapelPapierBemalt@{standartStapelPapierBemalt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{standartStapelPapierBemalt}{standartStapelPapierBemalt}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spielstand\+::standart\+Stapel\+Papier\+Bemalt = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_acfba15bdfb295b50df9cba961d3a6109}\label{classWeinAchtsWichtel_1_1Spielstand_acfba15bdfb295b50df9cba961d3a6109}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!standartStapelSchlitten@{standartStapelSchlitten}}
+\index{standartStapelSchlitten@{standartStapelSchlitten}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{standartStapelSchlitten}{standartStapelSchlitten}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spielstand\+::standart\+Stapel\+Schlitten = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_afa3bfe2a3f3c49a075673df8e411e612}\label{classWeinAchtsWichtel_1_1Spielstand_afa3bfe2a3f3c49a075673df8e411e612}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!standartStapelSchlittenMaxHaltbarkeit@{standartStapelSchlittenMaxHaltbarkeit}}
+\index{standartStapelSchlittenMaxHaltbarkeit@{standartStapelSchlittenMaxHaltbarkeit}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{standartStapelSchlittenMaxHaltbarkeit}{standartStapelSchlittenMaxHaltbarkeit}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spielstand\+::standart\+Stapel\+Schlitten\+Max\+Haltbarkeit = 35\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a7c51139ad17ddaef774b09cb726ad3fc}\label{classWeinAchtsWichtel_1_1Spielstand_a7c51139ad17ddaef774b09cb726ad3fc}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!standartStapelVerpackt@{standartStapelVerpackt}}
+\index{standartStapelVerpackt@{standartStapelVerpackt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{standartStapelVerpackt}{standartStapelVerpackt}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spielstand\+::standart\+Stapel\+Verpackt = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_ae12ebd34df966909cff894160532ca06}\label{classWeinAchtsWichtel_1_1Spielstand_ae12ebd34df966909cff894160532ca06}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!standartStapelVerpacktMax@{standartStapelVerpacktMax}}
+\index{standartStapelVerpacktMax@{standartStapelVerpacktMax}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{standartStapelVerpacktMax}{standartStapelVerpacktMax}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spielstand\+::standart\+Stapel\+Verpackt\+Max = 15\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a19a5d0ce54ca9599310241f9c3e2a269}\label{classWeinAchtsWichtel_1_1Spielstand_a19a5d0ce54ca9599310241f9c3e2a269}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!standartStapelWichtelMax@{standartStapelWichtelMax}}
+\index{standartStapelWichtelMax@{standartStapelWichtelMax}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{standartStapelWichtelMax}{standartStapelWichtelMax}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spielstand\+::standart\+Stapel\+Wichtel\+Max = 6\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a22527b8b54cf6b6de9adea21e74b7758}\label{classWeinAchtsWichtel_1_1Spielstand_a22527b8b54cf6b6de9adea21e74b7758}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!standartStapelZugestellt@{standartStapelZugestellt}}
+\index{standartStapelZugestellt@{standartStapelZugestellt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{standartStapelZugestellt}{standartStapelZugestellt}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spielstand\+::standart\+Stapel\+Zugestellt = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a4a46c008344bbad62afe6290406d3fea}\label{classWeinAchtsWichtel_1_1Spielstand_a4a46c008344bbad62afe6290406d3fea}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!stapelPapierBemalt@{stapelPapierBemalt}}
+\index{stapelPapierBemalt@{stapelPapierBemalt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{stapelPapierBemalt}{stapelPapierBemalt}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ Wein\+Achts\+Wichtel\+::\+Spielstand\+::stapel\+Papier\+Bemalt\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a2bc8376b047f9727a4d40bcd92d9ba93}\label{classWeinAchtsWichtel_1_1Spielstand_a2bc8376b047f9727a4d40bcd92d9ba93}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!stapelSchlitten@{stapelSchlitten}}
+\index{stapelSchlitten@{stapelSchlitten}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{stapelSchlitten}{stapelSchlitten}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ Wein\+Achts\+Wichtel\+::\+Spielstand\+::stapel\+Schlitten\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a865b2d07d7ecc262c6ab6eec012adf0d}\label{classWeinAchtsWichtel_1_1Spielstand_a865b2d07d7ecc262c6ab6eec012adf0d}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!stapelSchlittenMaxHaltbarkeit@{stapelSchlittenMaxHaltbarkeit}}
+\index{stapelSchlittenMaxHaltbarkeit@{stapelSchlittenMaxHaltbarkeit}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{stapelSchlittenMaxHaltbarkeit}{stapelSchlittenMaxHaltbarkeit}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ Wein\+Achts\+Wichtel\+::\+Spielstand\+::stapel\+Schlitten\+Max\+Haltbarkeit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a49fd7725ce912b23013376fbfb3b2b28}\label{classWeinAchtsWichtel_1_1Spielstand_a49fd7725ce912b23013376fbfb3b2b28}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!stapelVerpackt@{stapelVerpackt}}
+\index{stapelVerpackt@{stapelVerpackt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{stapelVerpackt}{stapelVerpackt}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ Wein\+Achts\+Wichtel\+::\+Spielstand\+::stapel\+Verpackt\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_add7428e5ac2f65d4b5a5d4a352618aa8}\label{classWeinAchtsWichtel_1_1Spielstand_add7428e5ac2f65d4b5a5d4a352618aa8}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!stapelVerpacktMax@{stapelVerpacktMax}}
+\index{stapelVerpacktMax@{stapelVerpacktMax}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{stapelVerpacktMax}{stapelVerpacktMax}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ Wein\+Achts\+Wichtel\+::\+Spielstand\+::stapel\+Verpackt\+Max\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a2c8baaa0af62d1fc8ad4e19f004bbff3}\label{classWeinAchtsWichtel_1_1Spielstand_a2c8baaa0af62d1fc8ad4e19f004bbff3}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!stapelWichtelMax@{stapelWichtelMax}}
+\index{stapelWichtelMax@{stapelWichtelMax}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{stapelWichtelMax}{stapelWichtelMax}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ Wein\+Achts\+Wichtel\+::\+Spielstand\+::stapel\+Wichtel\+Max\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_abe861f81c7e8c34c76d4989678fb3186}\label{classWeinAchtsWichtel_1_1Spielstand_abe861f81c7e8c34c76d4989678fb3186}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!stapelZugestellt@{stapelZugestellt}}
+\index{stapelZugestellt@{stapelZugestellt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{stapelZugestellt}{stapelZugestellt}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ Wein\+Achts\+Wichtel\+::\+Spielstand\+::stapel\+Zugestellt\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a9d317c461fda19bed4452b3ea02d7cf1}\label{classWeinAchtsWichtel_1_1Spielstand_a9d317c461fda19bed4452b3ea02d7cf1}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!zeitAbladen@{zeitAbladen}}
+\index{zeitAbladen@{zeitAbladen}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{zeitAbladen}{zeitAbladen}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::zeit\+Abladen = 1000\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_aa5efda7317aa361eb53e1d43375adcf4}\label{classWeinAchtsWichtel_1_1Spielstand_aa5efda7317aa361eb53e1d43375adcf4}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!zeitAufladen@{zeitAufladen}}
+\index{zeitAufladen@{zeitAufladen}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{zeitAufladen}{zeitAufladen}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::zeit\+Aufladen = 2000\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a4c47e1d87407cc7ae2672e97cdc67d43}\label{classWeinAchtsWichtel_1_1Spielstand_a4c47e1d87407cc7ae2672e97cdc67d43}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!zeitBemalen@{zeitBemalen}}
+\index{zeitBemalen@{zeitBemalen}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{zeitBemalen}{zeitBemalen}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::zeit\+Bemalen = 3000\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a200f5fa68da13bd34cbdeca49a75dd21}\label{classWeinAchtsWichtel_1_1Spielstand_a200f5fa68da13bd34cbdeca49a75dd21}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!zeitHolHilfe@{zeitHolHilfe}}
+\index{zeitHolHilfe@{zeitHolHilfe}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{zeitHolHilfe}{zeitHolHilfe}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::zeit\+Hol\+Hilfe = 100000\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a9bc7124c9f67a1b1d16c5294ba2ab1e5}\label{classWeinAchtsWichtel_1_1Spielstand_a9bc7124c9f67a1b1d16c5294ba2ab1e5}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!zeitPause@{zeitPause}}
+\index{zeitPause@{zeitPause}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{zeitPause}{zeitPause}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::zeit\+Pause = 1000\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_aaa94c3e4d0f216ff3a6f5957d53b6124}\label{classWeinAchtsWichtel_1_1Spielstand_aaa94c3e4d0f216ff3a6f5957d53b6124}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!zeitReparieren@{zeitReparieren}}
+\index{zeitReparieren@{zeitReparieren}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{zeitReparieren}{zeitReparieren}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::zeit\+Reparieren = 1500\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a7ace3fbdfafd5808e877912f0ffd2beb}\label{classWeinAchtsWichtel_1_1Spielstand_a7ace3fbdfafd5808e877912f0ffd2beb}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!zeitSchlittenAbfahrt@{zeitSchlittenAbfahrt}}
+\index{zeitSchlittenAbfahrt@{zeitSchlittenAbfahrt}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{zeitSchlittenAbfahrt}{zeitSchlittenAbfahrt}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::zeit\+Schlitten\+Abfahrt = 30000\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_a87db641094d3b47437ccc69cd1ae0733}\label{classWeinAchtsWichtel_1_1Spielstand_a87db641094d3b47437ccc69cd1ae0733}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!zeitSeitAbgefahren@{zeitSeitAbgefahren}}
+\index{zeitSeitAbgefahren@{zeitSeitAbgefahren}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{zeitSeitAbgefahren}{zeitSeitAbgefahren}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::zeit\+Seit\+Abgefahren = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spielstand_ad55833a16d9980dfc976fbdd86f02bce}\label{classWeinAchtsWichtel_1_1Spielstand_ad55833a16d9980dfc976fbdd86f02bce}} 
+\index{WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}!zeitVerpacken@{zeitVerpacken}}
+\index{zeitVerpacken@{zeitVerpacken}!WeinAchtsWichtel::Spielstand@{WeinAchtsWichtel::Spielstand}}
+\doxysubsubsection{\texorpdfstring{zeitVerpacken}{zeitVerpacken}}
+{\footnotesize\ttfamily unsigned Wein\+Achts\+Wichtel\+::\+Spielstand\+::zeit\+Verpacken = 3000\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+inc/\+Wein\+Achts\+Wichtel/\mbox{\hyperlink{Spielstand_8hpp}{Spielstand.\+hpp}}\item 
+src/\mbox{\hyperlink{Spielstand_8cpp}{Spielstand.\+cpp}}\end{DoxyCompactItemize}

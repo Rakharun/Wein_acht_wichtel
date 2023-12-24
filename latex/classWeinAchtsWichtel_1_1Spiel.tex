@@ -1,0 +1,238 @@
+\hypertarget{classWeinAchtsWichtel_1_1Spiel}{}\doxysection{Wein\+Achts\+Wichtel\+::Spiel Klassenreferenz}
+\label{classWeinAchtsWichtel_1_1Spiel}\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+
+
+{\ttfamily \#include $<$Spiel.\+hpp$>$}
+
+
+
+Zusammengehörigkeiten von Wein\+Achts\+Wichtel\+::Spiel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classWeinAchtsWichtel_1_1Spiel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a01967838d5edc67489b989763a122885}{Spiel}} ()
+\item 
+\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_aca4f7e06020d8d4776135f056ba9820e}{$\sim$\+Spiel}} ()
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a7aeccd6f8a0c5a1848aca9d7c7fb3b93}{spiel\+Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a22af6461994a67c18fa0c5bad7055fd6}{eingabe}} ()
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_ae58de6d80f0b0233c3024adfbfc1beae}{verarbeite\+Eingabe}} ()
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a03648dc12db1775d1110076f5eec5828}{unterrichte\+Spielfeld}} ()
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a8f746d97cf6263170c4da7f457d22737}{ablauf\+Konsoleneingabe}} ()
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_ad0bf84105a0e306b17bfde6790a24a0c}{ueberpruefe\+Spielende}} ()
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_ab5fab19cfa9d6b7313fff49c64bfcb85}{befehlige\+Wichtel}} ()
+\item 
+void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_aff2dc5a5960adef3159f802b77d4c3b1}{schlitten\+Abfahrt}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private, statische Methoden}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a4f7fb653507f21e357713e5b90d28d9d}{eingabe\+Schleife}} (\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel}{Spiel}} $\ast$mein\+Spiel)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a2da771b036d0c868b254b9a35b9b3bda}{spiel\+Status}} = true
+\item 
+char \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_abc2443750cfe4411d81b390bbdbbbfb2}{benutzer\+Eingabe}} \mbox{[}\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a9040949f8f46c0100870a1125a77b8e7}{benutzer\+Eingabe\+Laenge}}\mbox{]}
+\item 
+std\+::thread \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a94daedb6f6efef7f2873da27541db786}{eingabe\+Thread}}
+\item 
+\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand}{Wein\+Achts\+Wichtel\+::\+Spielstand}} \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a9fc0c28e86dceeb3f734af00e05b86ee}{mein\+Spielstand}}
+\item 
+\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielfeld}{Wein\+Achts\+Wichtel\+::\+Spielfeld}} \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a86ed727f4bd247bafac03dc02aa1c207}{mein\+Spielfeld}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWeinAchtsWichtel_1_1Wichtel}{Wein\+Achts\+Wichtel\+::\+Wichtel}} $>$ $>$ \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_ab40649de0aa460551a24d44ba4cb86dd}{wichtel\+Vector}}
+\item 
+std\+::string \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a169e210a56a163f7ec0c28e092e5889e}{wichtel\+Namen}} \mbox{[}11\mbox{]} = \{\char`\"{}Erni \+:\char`\"{},\char`\"{}Bert \+:\char`\"{},\char`\"{}Sid \+:\char`\"{},\char`\"{}Pixxi \+:\char`\"{},\char`\"{}Romy \+:\char`\"{},\char`\"{}Zoe \+:\char`\"{},\char`\"{}Rudolph \+:\char`\"{},\char`\"{}Ruprecht\+:\char`\"{},\char`\"{}Gevatter\+:\char`\"{},\char`\"{}Santa \+:\char`\"{},\char`\"{}no\+Person\char`\"{}\}
+\item 
+std\+::string \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a2c99146b57c2011ba8982f8a58a84265}{wichtel\+Namen\+Richtig}} \mbox{[}11\mbox{]} = \{\char`\"{}Erni\char`\"{},\char`\"{}Bert\char`\"{},\char`\"{}Sid\char`\"{},\char`\"{}Pixxi\char`\"{},\char`\"{}Romy\char`\"{},\char`\"{}Zoe\char`\"{},\char`\"{}Rudolph\char`\"{},\char`\"{}Ruprecht\char`\"{},\char`\"{}Gevatter\char`\"{},\char`\"{}Santa\char`\"{},\char`\"{}no\+Person\char`\"{}\}
+\item 
+std\+::string \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a9b049a5ecb9e76cb53c7d90bebb8a01b}{wichtel\+Aufgaben\+Richtig}} \mbox{[}10\mbox{]} = \{\char`\"{}warte\char`\"{},\char`\"{}pause\char`\"{},\char`\"{}bemal\char`\"{},\char`\"{}verpack\char`\"{},\char`\"{}aufladen\char`\"{},\char`\"{}abladen\char`\"{},\char`\"{}holhilfe\char`\"{}, \char`\"{}tunen\char`\"{},\char`\"{}abruf\char`\"{}, \char`\"{}urlaub\char`\"{}\}
+\item 
+int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a8552fe95c92bda494df70a210638aafb}{nutzer\+Konsole}} \mbox{[}2\mbox{]} = \{0,0\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Statische, private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_ad299ea0b33abad72f1d96c7ae3c14b7a}{spielschleife\+\_\+verzoegerung}} = 1
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a9040949f8f46c0100870a1125a77b8e7}{benutzer\+Eingabe\+Laenge}} = 9
+\item 
+static const int \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a93bb45d900c3664eb0111e916e514dde}{eingabe\+\_\+verzoegerung}} = 20
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a01967838d5edc67489b989763a122885}\label{classWeinAchtsWichtel_1_1Spiel_a01967838d5edc67489b989763a122885}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!Spiel@{Spiel}}
+\index{Spiel@{Spiel}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{Spiel()}{Spiel()}}
+{\footnotesize\ttfamily Wein\+Achts\+Wichtel\+::\+Spiel\+::\+Spiel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_aca4f7e06020d8d4776135f056ba9820e}\label{classWeinAchtsWichtel_1_1Spiel_aca4f7e06020d8d4776135f056ba9820e}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!````~Spiel@{$\sim$Spiel}}
+\index{````~Spiel@{$\sim$Spiel}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{$\sim$Spiel()}{~Spiel()}}
+{\footnotesize\ttfamily Wein\+Achts\+Wichtel\+::\+Spiel\+::$\sim$\+Spiel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a8f746d97cf6263170c4da7f457d22737}\label{classWeinAchtsWichtel_1_1Spiel_a8f746d97cf6263170c4da7f457d22737}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!ablaufKonsoleneingabe@{ablaufKonsoleneingabe}}
+\index{ablaufKonsoleneingabe@{ablaufKonsoleneingabe}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{ablaufKonsoleneingabe()}{ablaufKonsoleneingabe()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spiel\+::ablauf\+Konsoleneingabe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_ab5fab19cfa9d6b7313fff49c64bfcb85}\label{classWeinAchtsWichtel_1_1Spiel_ab5fab19cfa9d6b7313fff49c64bfcb85}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!befehligeWichtel@{befehligeWichtel}}
+\index{befehligeWichtel@{befehligeWichtel}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{befehligeWichtel()}{befehligeWichtel()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spiel\+::befehlige\+Wichtel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a22af6461994a67c18fa0c5bad7055fd6}\label{classWeinAchtsWichtel_1_1Spiel_a22af6461994a67c18fa0c5bad7055fd6}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!eingabe@{eingabe}}
+\index{eingabe@{eingabe}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{eingabe()}{eingabe()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spiel\+::eingabe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a4f7fb653507f21e357713e5b90d28d9d}\label{classWeinAchtsWichtel_1_1Spiel_a4f7fb653507f21e357713e5b90d28d9d}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!eingabeSchleife@{eingabeSchleife}}
+\index{eingabeSchleife@{eingabeSchleife}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{eingabeSchleife()}{eingabeSchleife()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spiel\+::eingabe\+Schleife (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel}{Spiel}} $\ast$}]{mein\+Spiel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_aff2dc5a5960adef3159f802b77d4c3b1}\label{classWeinAchtsWichtel_1_1Spiel_aff2dc5a5960adef3159f802b77d4c3b1}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!schlittenAbfahrt@{schlittenAbfahrt}}
+\index{schlittenAbfahrt@{schlittenAbfahrt}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{schlittenAbfahrt()}{schlittenAbfahrt()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spiel\+::schlitten\+Abfahrt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a7aeccd6f8a0c5a1848aca9d7c7fb3b93}\label{classWeinAchtsWichtel_1_1Spiel_a7aeccd6f8a0c5a1848aca9d7c7fb3b93}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!spielStart@{spielStart}}
+\index{spielStart@{spielStart}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{spielStart()}{spielStart()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spiel\+::spiel\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_ad0bf84105a0e306b17bfde6790a24a0c}\label{classWeinAchtsWichtel_1_1Spiel_ad0bf84105a0e306b17bfde6790a24a0c}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!ueberpruefeSpielende@{ueberpruefeSpielende}}
+\index{ueberpruefeSpielende@{ueberpruefeSpielende}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{ueberpruefeSpielende()}{ueberpruefeSpielende()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spiel\+::ueberpruefe\+Spielende (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a03648dc12db1775d1110076f5eec5828}\label{classWeinAchtsWichtel_1_1Spiel_a03648dc12db1775d1110076f5eec5828}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!unterrichteSpielfeld@{unterrichteSpielfeld}}
+\index{unterrichteSpielfeld@{unterrichteSpielfeld}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{unterrichteSpielfeld()}{unterrichteSpielfeld()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spiel\+::unterrichte\+Spielfeld (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_ae58de6d80f0b0233c3024adfbfc1beae}\label{classWeinAchtsWichtel_1_1Spiel_ae58de6d80f0b0233c3024adfbfc1beae}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!verarbeiteEingabe@{verarbeiteEingabe}}
+\index{verarbeiteEingabe@{verarbeiteEingabe}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{verarbeiteEingabe()}{verarbeiteEingabe()}}
+{\footnotesize\ttfamily void Wein\+Achts\+Wichtel\+::\+Spiel\+::verarbeite\+Eingabe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_abc2443750cfe4411d81b390bbdbbbfb2}\label{classWeinAchtsWichtel_1_1Spiel_abc2443750cfe4411d81b390bbdbbbfb2}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!benutzerEingabe@{benutzerEingabe}}
+\index{benutzerEingabe@{benutzerEingabe}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{benutzerEingabe}{benutzerEingabe}}
+{\footnotesize\ttfamily char Wein\+Achts\+Wichtel\+::\+Spiel\+::benutzer\+Eingabe\mbox{[}\mbox{\hyperlink{classWeinAchtsWichtel_1_1Spiel_a9040949f8f46c0100870a1125a77b8e7}{benutzer\+Eingabe\+Laenge}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a9040949f8f46c0100870a1125a77b8e7}\label{classWeinAchtsWichtel_1_1Spiel_a9040949f8f46c0100870a1125a77b8e7}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!benutzerEingabeLaenge@{benutzerEingabeLaenge}}
+\index{benutzerEingabeLaenge@{benutzerEingabeLaenge}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{benutzerEingabeLaenge}{benutzerEingabeLaenge}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spiel\+::benutzer\+Eingabe\+Laenge = 9\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a93bb45d900c3664eb0111e916e514dde}\label{classWeinAchtsWichtel_1_1Spiel_a93bb45d900c3664eb0111e916e514dde}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!eingabe\_verzoegerung@{eingabe\_verzoegerung}}
+\index{eingabe\_verzoegerung@{eingabe\_verzoegerung}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{eingabe\_verzoegerung}{eingabe\_verzoegerung}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spiel\+::eingabe\+\_\+verzoegerung = 20\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a94daedb6f6efef7f2873da27541db786}\label{classWeinAchtsWichtel_1_1Spiel_a94daedb6f6efef7f2873da27541db786}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!eingabeThread@{eingabeThread}}
+\index{eingabeThread@{eingabeThread}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{eingabeThread}{eingabeThread}}
+{\footnotesize\ttfamily std\+::thread Wein\+Achts\+Wichtel\+::\+Spiel\+::eingabe\+Thread\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a86ed727f4bd247bafac03dc02aa1c207}\label{classWeinAchtsWichtel_1_1Spiel_a86ed727f4bd247bafac03dc02aa1c207}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!meinSpielfeld@{meinSpielfeld}}
+\index{meinSpielfeld@{meinSpielfeld}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{meinSpielfeld}{meinSpielfeld}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielfeld}{Wein\+Achts\+Wichtel\+::\+Spielfeld}} Wein\+Achts\+Wichtel\+::\+Spiel\+::mein\+Spielfeld\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a9fc0c28e86dceeb3f734af00e05b86ee}\label{classWeinAchtsWichtel_1_1Spiel_a9fc0c28e86dceeb3f734af00e05b86ee}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!meinSpielstand@{meinSpielstand}}
+\index{meinSpielstand@{meinSpielstand}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{meinSpielstand}{meinSpielstand}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWeinAchtsWichtel_1_1Spielstand}{Wein\+Achts\+Wichtel\+::\+Spielstand}} Wein\+Achts\+Wichtel\+::\+Spiel\+::mein\+Spielstand\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a8552fe95c92bda494df70a210638aafb}\label{classWeinAchtsWichtel_1_1Spiel_a8552fe95c92bda494df70a210638aafb}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!nutzerKonsole@{nutzerKonsole}}
+\index{nutzerKonsole@{nutzerKonsole}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{nutzerKonsole}{nutzerKonsole}}
+{\footnotesize\ttfamily int Wein\+Achts\+Wichtel\+::\+Spiel\+::nutzer\+Konsole\mbox{[}2\mbox{]} = \{0,0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_ad299ea0b33abad72f1d96c7ae3c14b7a}\label{classWeinAchtsWichtel_1_1Spiel_ad299ea0b33abad72f1d96c7ae3c14b7a}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!spielschleife\_verzoegerung@{spielschleife\_verzoegerung}}
+\index{spielschleife\_verzoegerung@{spielschleife\_verzoegerung}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{spielschleife\_verzoegerung}{spielschleife\_verzoegerung}}
+{\footnotesize\ttfamily const int Wein\+Achts\+Wichtel\+::\+Spiel\+::spielschleife\+\_\+verzoegerung = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a2da771b036d0c868b254b9a35b9b3bda}\label{classWeinAchtsWichtel_1_1Spiel_a2da771b036d0c868b254b9a35b9b3bda}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!spielStatus@{spielStatus}}
+\index{spielStatus@{spielStatus}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{spielStatus}{spielStatus}}
+{\footnotesize\ttfamily bool Wein\+Achts\+Wichtel\+::\+Spiel\+::spiel\+Status = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a9b049a5ecb9e76cb53c7d90bebb8a01b}\label{classWeinAchtsWichtel_1_1Spiel_a9b049a5ecb9e76cb53c7d90bebb8a01b}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!wichtelAufgabenRichtig@{wichtelAufgabenRichtig}}
+\index{wichtelAufgabenRichtig@{wichtelAufgabenRichtig}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{wichtelAufgabenRichtig}{wichtelAufgabenRichtig}}
+{\footnotesize\ttfamily std\+::string Wein\+Achts\+Wichtel\+::\+Spiel\+::wichtel\+Aufgaben\+Richtig\mbox{[}10\mbox{]} = \{\char`\"{}warte\char`\"{},\char`\"{}pause\char`\"{},\char`\"{}bemal\char`\"{},\char`\"{}verpack\char`\"{},\char`\"{}aufladen\char`\"{},\char`\"{}abladen\char`\"{},\char`\"{}holhilfe\char`\"{}, \char`\"{}tunen\char`\"{},\char`\"{}abruf\char`\"{}, \char`\"{}urlaub\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a169e210a56a163f7ec0c28e092e5889e}\label{classWeinAchtsWichtel_1_1Spiel_a169e210a56a163f7ec0c28e092e5889e}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!wichtelNamen@{wichtelNamen}}
+\index{wichtelNamen@{wichtelNamen}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{wichtelNamen}{wichtelNamen}}
+{\footnotesize\ttfamily std\+::string Wein\+Achts\+Wichtel\+::\+Spiel\+::wichtel\+Namen\mbox{[}11\mbox{]} = \{\char`\"{}Erni \+:\char`\"{},\char`\"{}Bert \+:\char`\"{},\char`\"{}Sid \+:\char`\"{},\char`\"{}Pixxi \+:\char`\"{},\char`\"{}Romy \+:\char`\"{},\char`\"{}Zoe \+:\char`\"{},\char`\"{}Rudolph \+:\char`\"{},\char`\"{}Ruprecht\+:\char`\"{},\char`\"{}Gevatter\+:\char`\"{},\char`\"{}Santa \+:\char`\"{},\char`\"{}no\+Person\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_a2c99146b57c2011ba8982f8a58a84265}\label{classWeinAchtsWichtel_1_1Spiel_a2c99146b57c2011ba8982f8a58a84265}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!wichtelNamenRichtig@{wichtelNamenRichtig}}
+\index{wichtelNamenRichtig@{wichtelNamenRichtig}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{wichtelNamenRichtig}{wichtelNamenRichtig}}
+{\footnotesize\ttfamily std\+::string Wein\+Achts\+Wichtel\+::\+Spiel\+::wichtel\+Namen\+Richtig\mbox{[}11\mbox{]} = \{\char`\"{}Erni\char`\"{},\char`\"{}Bert\char`\"{},\char`\"{}Sid\char`\"{},\char`\"{}Pixxi\char`\"{},\char`\"{}Romy\char`\"{},\char`\"{}Zoe\char`\"{},\char`\"{}Rudolph\char`\"{},\char`\"{}Ruprecht\char`\"{},\char`\"{}Gevatter\char`\"{},\char`\"{}Santa\char`\"{},\char`\"{}no\+Person\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWeinAchtsWichtel_1_1Spiel_ab40649de0aa460551a24d44ba4cb86dd}\label{classWeinAchtsWichtel_1_1Spiel_ab40649de0aa460551a24d44ba4cb86dd}} 
+\index{WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}!wichtelVector@{wichtelVector}}
+\index{wichtelVector@{wichtelVector}!WeinAchtsWichtel::Spiel@{WeinAchtsWichtel::Spiel}}
+\doxysubsubsection{\texorpdfstring{wichtelVector}{wichtelVector}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWeinAchtsWichtel_1_1Wichtel}{Wein\+Achts\+Wichtel\+::\+Wichtel}}$>$ $>$ Wein\+Achts\+Wichtel\+::\+Spiel\+::wichtel\+Vector\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+inc/\+Wein\+Achts\+Wichtel/\mbox{\hyperlink{Spiel_8hpp}{Spiel.\+hpp}}\item 
+src/\mbox{\hyperlink{Spiel_8cpp}{Spiel.\+cpp}}\end{DoxyCompactItemize}

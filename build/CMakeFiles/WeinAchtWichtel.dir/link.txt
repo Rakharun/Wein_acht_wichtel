@@ -1,0 +1,1 @@
+g++ CMakeFiles/WeinAchtWichtel.dir/main.cpp.o CMakeFiles/WeinAchtWichtel.dir/src/Spiel.cpp.o CMakeFiles/WeinAchtWichtel.dir/src/Spielstand.cpp.o CMakeFiles/WeinAchtWichtel.dir/src/Wichtel.cpp.o CMakeFiles/WeinAchtWichtel.dir/src/Spielfeld.cpp.o -o WeinAchtWichtel 

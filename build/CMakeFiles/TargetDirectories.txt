@@ -1,0 +1,3 @@
+/mnt/c/Users/mmgra/OneDrive/Studium_PDFs/SoftwareEng_II/programmentwurf_5393168/WeinAchtsWichtel/build/CMakeFiles/WeinAchtWichtel.dir
+/mnt/c/Users/mmgra/OneDrive/Studium_PDFs/SoftwareEng_II/programmentwurf_5393168/WeinAchtsWichtel/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/mmgra/OneDrive/Studium_PDFs/SoftwareEng_II/programmentwurf_5393168/WeinAchtsWichtel/build/CMakeFiles/rebuild_cache.dir

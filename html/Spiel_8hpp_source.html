@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WeinAchtsWichtel: inc/WeinAchtsWichtel/Spiel.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WeinAchtsWichtel
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_108d9a27ea601d25d94469d5721fe3e3.html">WeinAchtsWichtel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Spiel.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Spiel_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WEIN_ACHT_WICHTEL_SPIEL_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WEIN_ACHT_WICHTEL_SPIEL_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span> <span class="comment">// Für strcpy</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span> <span class="comment">//f+r std::to_string(i)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;termios.h&gt;</span> <span class="comment">//Fuer deaktivieren der Enterbestätigung</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../WeinAchtsWichtel/WichtelEnum.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../WeinAchtsWichtel/Spielfeld.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../WeinAchtsWichtel/Spielstand.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../WeinAchtsWichtel/Wichtel.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespaceWeinAchtsWichtel.html">   16</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceWeinAchtsWichtel.html">WeinAchtsWichtel</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classWeinAchtsWichtel_1_1Spiel.html">Spiel</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">/* data */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#ad299ea0b33abad72f1d96c7ae3c14b7a">   22</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#ad299ea0b33abad72f1d96c7ae3c14b7a">spielschleife_verzoegerung</a> = 1;  <span class="comment">//Verarbeitungszeit zur verarbeitung eines characters aus dem Eingabepuffer</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a2da771b036d0c868b254b9a35b9b3bda">   23</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a2da771b036d0c868b254b9a35b9b3bda">spielStatus</a> = <span class="keyword">true</span>;    <span class="comment">//Das spiel lauft bis spiel == false</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a9040949f8f46c0100870a1125a77b8e7">   24</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span>  <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a9040949f8f46c0100870a1125a77b8e7">benutzerEingabeLaenge</a> = 9; <span class="comment">//Länge des char* indem eingaben gespeichert und ausgewertet werden</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#abc2443750cfe4411d81b390bbdbbbfb2">   25</a></span>&#160;        <span class="keywordtype">char</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#abc2443750cfe4411d81b390bbdbbbfb2">benutzerEingabe</a>[<a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a9040949f8f46c0100870a1125a77b8e7">benutzerEingabeLaenge</a>]; <span class="comment">//Hier werden Benutzereingaben gesperichert auf die reagiert wird</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">//Thread zur asyncronen Eingabe und Steuerung</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a94daedb6f6efef7f2873da27541db786">   28</a></span>&#160;        std::thread <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a94daedb6f6efef7f2873da27541db786">eingabeThread</a>; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a93bb45d900c3664eb0111e916e514dde">   29</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a93bb45d900c3664eb0111e916e514dde">eingabe_verzoegerung</a> = 20;  <span class="comment">//Verarbeitungszeit zur verarbeitung eines characters aus dem Eingabepuffer</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">//Erstelle ein SPielstand</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a9fc0c28e86dceeb3f734af00e05b86ee">   31</a></span>&#160;        <a class="code" href="classWeinAchtsWichtel_1_1Spielstand.html">WeinAchtsWichtel::Spielstand</a> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a9fc0c28e86dceeb3f734af00e05b86ee">meinSpielstand</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">//Erstelle das Spielfeld</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a86ed727f4bd247bafac03dc02aa1c207">   33</a></span>&#160;        <a class="code" href="classWeinAchtsWichtel_1_1Spielfeld.html">WeinAchtsWichtel::Spielfeld</a> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a86ed727f4bd247bafac03dc02aa1c207">meinSpielfeld</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//Erstelle ein Vector für Wichtel</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#ab40649de0aa460551a24d44ba4cb86dd">   35</a></span>&#160;        std::vector&lt;std::shared_ptr&lt;WeinAchtsWichtel::Wichtel&gt;&gt; <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#ab40649de0aa460551a24d44ba4cb86dd">wichtelVector</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a169e210a56a163f7ec0c28e092e5889e">   36</a></span>&#160;        std::string <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a169e210a56a163f7ec0c28e092e5889e">wichtelNamen</a>[11] = {<span class="stringliteral">&quot;Erni    :&quot;</span>,<span class="stringliteral">&quot;Bert    :&quot;</span>,<span class="stringliteral">&quot;Sid     :&quot;</span>,<span class="stringliteral">&quot;Pixxi   :&quot;</span>,<span class="stringliteral">&quot;Romy    :&quot;</span>,<span class="stringliteral">&quot;Zoe     :&quot;</span>,<span class="stringliteral">&quot;Rudolph :&quot;</span>,<span class="stringliteral">&quot;Ruprecht:&quot;</span>,<span class="stringliteral">&quot;Gevatter:&quot;</span>,<span class="stringliteral">&quot;Santa   :&quot;</span>,<span class="stringliteral">&quot;noPerson&quot;</span>};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">//Wichtel zum Stringcheck</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a2c99146b57c2011ba8982f8a58a84265">   38</a></span>&#160;        std::string <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a2c99146b57c2011ba8982f8a58a84265">wichtelNamenRichtig</a>[11] = {<span class="stringliteral">&quot;Erni&quot;</span>,<span class="stringliteral">&quot;Bert&quot;</span>,<span class="stringliteral">&quot;Sid&quot;</span>,<span class="stringliteral">&quot;Pixxi&quot;</span>,<span class="stringliteral">&quot;Romy&quot;</span>,<span class="stringliteral">&quot;Zoe&quot;</span>,<span class="stringliteral">&quot;Rudolph&quot;</span>,<span class="stringliteral">&quot;Ruprecht&quot;</span>,<span class="stringliteral">&quot;Gevatter&quot;</span>,<span class="stringliteral">&quot;Santa&quot;</span>,<span class="stringliteral">&quot;noPerson&quot;</span>};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">//Aufgaben zum Stringcheck</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a9b049a5ecb9e76cb53c7d90bebb8a01b">   40</a></span>&#160;        std::string <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a9b049a5ecb9e76cb53c7d90bebb8a01b">wichtelAufgabenRichtig</a>[10] = {<span class="stringliteral">&quot;warte&quot;</span>,<span class="stringliteral">&quot;pause&quot;</span>,<span class="stringliteral">&quot;bemal&quot;</span>,<span class="stringliteral">&quot;verpack&quot;</span>,<span class="stringliteral">&quot;aufladen&quot;</span>,<span class="stringliteral">&quot;abladen&quot;</span>,<span class="stringliteral">&quot;holhilfe&quot;</span>, <span class="stringliteral">&quot;tunen&quot;</span>,<span class="stringliteral">&quot;abruf&quot;</span>, <span class="stringliteral">&quot;urlaub&quot;</span>};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//Status der Nutzerkonsole</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#a8552fe95c92bda494df70a210638aafb">   43</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a8552fe95c92bda494df70a210638aafb">nutzerKonsole</a>[2] = {0,0};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">//Nimm eine Usereingabe</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a22af6461994a67c18fa0c5bad7055fd6">eingabe</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//Wird in einen Threat gestartet der Asyncron cin annimmt.</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a4f7fb653507f21e357713e5b90d28d9d">eingabeSchleife</a>(<a class="code" href="classWeinAchtsWichtel_1_1Spiel.html">Spiel</a>* meinSpiel);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//Unternehme einen Spielzug mit der Aktuellen eingabe</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#ae58de6d80f0b0233c3024adfbfc1beae">verarbeiteEingabe</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// Update Spielfeld</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a03648dc12db1775d1110076f5eec5828">unterrichteSpielfeld</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// Prüfe und Printe die Formatierung der Eingabe</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a8f746d97cf6263170c4da7f457d22737">ablaufKonsoleneingabe</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//Ueberprüfe Spielende</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#ad0bf84105a0e306b17bfde6790a24a0c">ueberpruefeSpielende</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">//Reagiere auf Nutzereingaben</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#ab5fab19cfa9d6b7313fff49c64bfcb85">befehligeWichtel</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">//Lässt den Schlitten abfahren oder Zerbrechen</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classWeinAchtsWichtel_1_1Spiel.html#aff2dc5a5960adef3159f802b77d4c3b1">   60</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#aff2dc5a5960adef3159f802b77d4c3b1">schlittenAbfahrt</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//Konstruktor und Destruktor</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a01967838d5edc67489b989763a122885">Spiel</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#aca4f7e06020d8d4776135f056ba9820e">~Spiel</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//game loop</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classWeinAchtsWichtel_1_1Spiel.html#a7aeccd6f8a0c5a1848aca9d7c7fb3b93">spielStart</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;              </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html">WeinAchtsWichtel::Spiel</a></div><div class="ttdef"><b>Definition:</b> Spiel.hpp:19</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a01967838d5edc67489b989763a122885"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a01967838d5edc67489b989763a122885">WeinAchtsWichtel::Spiel::Spiel</a></div><div class="ttdeci">Spiel()</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:5</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a03648dc12db1775d1110076f5eec5828"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a03648dc12db1775d1110076f5eec5828">WeinAchtsWichtel::Spiel::unterrichteSpielfeld</a></div><div class="ttdeci">void unterrichteSpielfeld()</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:122</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a169e210a56a163f7ec0c28e092e5889e"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a169e210a56a163f7ec0c28e092e5889e">WeinAchtsWichtel::Spiel::wichtelNamen</a></div><div class="ttdeci">std::string wichtelNamen[11]</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:36</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a22af6461994a67c18fa0c5bad7055fd6"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a22af6461994a67c18fa0c5bad7055fd6">WeinAchtsWichtel::Spiel::eingabe</a></div><div class="ttdeci">void eingabe()</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:272</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a2c99146b57c2011ba8982f8a58a84265"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a2c99146b57c2011ba8982f8a58a84265">WeinAchtsWichtel::Spiel::wichtelNamenRichtig</a></div><div class="ttdeci">std::string wichtelNamenRichtig[11]</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:38</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a2da771b036d0c868b254b9a35b9b3bda"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a2da771b036d0c868b254b9a35b9b3bda">WeinAchtsWichtel::Spiel::spielStatus</a></div><div class="ttdeci">bool spielStatus</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:23</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a4f7fb653507f21e357713e5b90d28d9d"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a4f7fb653507f21e357713e5b90d28d9d">WeinAchtsWichtel::Spiel::eingabeSchleife</a></div><div class="ttdeci">static void eingabeSchleife(Spiel *meinSpiel)</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:248</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a7aeccd6f8a0c5a1848aca9d7c7fb3b93"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a7aeccd6f8a0c5a1848aca9d7c7fb3b93">WeinAchtsWichtel::Spiel::spielStart</a></div><div class="ttdeci">void spielStart()</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:46</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a8552fe95c92bda494df70a210638aafb"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a8552fe95c92bda494df70a210638aafb">WeinAchtsWichtel::Spiel::nutzerKonsole</a></div><div class="ttdeci">int nutzerKonsole[2]</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:43</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a86ed727f4bd247bafac03dc02aa1c207"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a86ed727f4bd247bafac03dc02aa1c207">WeinAchtsWichtel::Spiel::meinSpielfeld</a></div><div class="ttdeci">WeinAchtsWichtel::Spielfeld meinSpielfeld</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:33</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a8f746d97cf6263170c4da7f457d22737"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a8f746d97cf6263170c4da7f457d22737">WeinAchtsWichtel::Spiel::ablaufKonsoleneingabe</a></div><div class="ttdeci">void ablaufKonsoleneingabe()</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:160</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a9040949f8f46c0100870a1125a77b8e7"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a9040949f8f46c0100870a1125a77b8e7">WeinAchtsWichtel::Spiel::benutzerEingabeLaenge</a></div><div class="ttdeci">static const int benutzerEingabeLaenge</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:24</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a93bb45d900c3664eb0111e916e514dde"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a93bb45d900c3664eb0111e916e514dde">WeinAchtsWichtel::Spiel::eingabe_verzoegerung</a></div><div class="ttdeci">static const int eingabe_verzoegerung</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:29</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a94daedb6f6efef7f2873da27541db786"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a94daedb6f6efef7f2873da27541db786">WeinAchtsWichtel::Spiel::eingabeThread</a></div><div class="ttdeci">std::thread eingabeThread</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:28</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a9b049a5ecb9e76cb53c7d90bebb8a01b"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a9b049a5ecb9e76cb53c7d90bebb8a01b">WeinAchtsWichtel::Spiel::wichtelAufgabenRichtig</a></div><div class="ttdeci">std::string wichtelAufgabenRichtig[10]</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:40</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_a9fc0c28e86dceeb3f734af00e05b86ee"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#a9fc0c28e86dceeb3f734af00e05b86ee">WeinAchtsWichtel::Spiel::meinSpielstand</a></div><div class="ttdeci">WeinAchtsWichtel::Spielstand meinSpielstand</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:31</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_ab40649de0aa460551a24d44ba4cb86dd"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#ab40649de0aa460551a24d44ba4cb86dd">WeinAchtsWichtel::Spiel::wichtelVector</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; WeinAchtsWichtel::Wichtel &gt; &gt; wichtelVector</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:35</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_ab5fab19cfa9d6b7313fff49c64bfcb85"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#ab5fab19cfa9d6b7313fff49c64bfcb85">WeinAchtsWichtel::Spiel::befehligeWichtel</a></div><div class="ttdeci">void befehligeWichtel()</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:189</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_abc2443750cfe4411d81b390bbdbbbfb2"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#abc2443750cfe4411d81b390bbdbbbfb2">WeinAchtsWichtel::Spiel::benutzerEingabe</a></div><div class="ttdeci">char benutzerEingabe[benutzerEingabeLaenge]</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:25</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_aca4f7e06020d8d4776135f056ba9820e"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#aca4f7e06020d8d4776135f056ba9820e">WeinAchtsWichtel::Spiel::~Spiel</a></div><div class="ttdeci">~Spiel()</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:27</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_ad0bf84105a0e306b17bfde6790a24a0c"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#ad0bf84105a0e306b17bfde6790a24a0c">WeinAchtsWichtel::Spiel::ueberpruefeSpielende</a></div><div class="ttdeci">void ueberpruefeSpielende()</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:88</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_ad299ea0b33abad72f1d96c7ae3c14b7a"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#ad299ea0b33abad72f1d96c7ae3c14b7a">WeinAchtsWichtel::Spiel::spielschleife_verzoegerung</a></div><div class="ttdeci">static const int spielschleife_verzoegerung</div><div class="ttdef"><b>Definition:</b> Spiel.hpp:22</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_ae58de6d80f0b0233c3024adfbfc1beae"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#ae58de6d80f0b0233c3024adfbfc1beae">WeinAchtsWichtel::Spiel::verarbeiteEingabe</a></div><div class="ttdeci">void verarbeiteEingabe()</div><div class="ttdef"><b>Definition:</b> Spiel.cpp:99</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spiel_html_aff2dc5a5960adef3159f802b77d4c3b1"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spiel.html#aff2dc5a5960adef3159f802b77d4c3b1">WeinAchtsWichtel::Spiel::schlittenAbfahrt</a></div><div class="ttdeci">void schlittenAbfahrt()</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spielfeld_html"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spielfeld.html">WeinAchtsWichtel::Spielfeld</a></div><div class="ttdef"><b>Definition:</b> Spielfeld.hpp:14</div></div>
+<div class="ttc" id="aclassWeinAchtsWichtel_1_1Spielstand_html"><div class="ttname"><a href="classWeinAchtsWichtel_1_1Spielstand.html">WeinAchtsWichtel::Spielstand</a></div><div class="ttdef"><b>Definition:</b> Spielstand.hpp:15</div></div>
+<div class="ttc" id="anamespaceWeinAchtsWichtel_html"><div class="ttname"><a href="namespaceWeinAchtsWichtel.html">WeinAchtsWichtel</a></div><div class="ttdef"><b>Definition:</b> Spiel.hpp:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
